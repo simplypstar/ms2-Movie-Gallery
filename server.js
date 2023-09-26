@@ -5,24 +5,24 @@ const methodOverride = require("method-override")
 const app = express()
 const mongoose = require("mongoose")
 
-// // DB connection
-// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => console.log('DB connected'))
-//     .catch(err => console.error(err));
+// DB connection
+mongoose.connect("mongodb+srv://mernstack:mernstack@cluster0.ownjxhk.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('DB connected'))
+    .catch(err => console.error(err));
 
-async function dbconnection() {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
-    console.log("DB connected")
-  } catch (err) {
-    console.error(err)
-  }
-}
+// async function dbconnection() {
+//   try {
+//     await mongoose.connect(process.env.MONGO_URI, {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//     })
+//     console.log("DB connected")
+//   } catch (err) {
+//     console.error(err)
+//   }
+// }
 
-dbconnection()
+// dbconnection()
 
 // middleware
 app.set("views", __dirname + "/views")
