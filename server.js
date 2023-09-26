@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/movies', (req, res) => {
+    res.redirect('/movies')
+})
+
 app.get('*', (req, res) => {
     res.render('Error404')
 })
