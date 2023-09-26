@@ -15,7 +15,7 @@ router.get("/data/seed", async (req, res) => {
 
 //get index page
 router.get("/", (req, res) => {
-  Movie.find()
+  Movie.find({}, null, { maxTimeMS: 30000 })
     .then((movies) => {
       res.render("movies/index", { movies })
     })
