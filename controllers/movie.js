@@ -14,23 +14,36 @@ router.get("/data/seed", async (req, res) => {
 })
 
 //get index page
-router.get("/", async (req, res) => {
-  const movies = await Movie.find()
-  res.render("movies/index", { movies })
+router.get("/", (req, res) => {
+  Movie.find()
+    .then((movies) => {
+      res.render("movies/index", { movies })
+    })
+    .catch((err) => {
+      console.log(err)
+      res.render("error404")
+    })
 })
 
 // create new movie
-router.post("/", async (req, res) => {
-  try {
-    const createMovie = await Movie.create(req.body)
-    if (!createMovie) {
+router.post("/", (req, res) => {
+  Movie.create(req.body)
+  .then(() => {
+    res.redirect("/movies")
+  })
+  .catch((err) => {
+    if (err && err.name == "ValidationError") {
+      let message = "Validation Error: "
+      for (var field in err.errors) {
+        message += `${field} was ${err.errors[field].value}. `
+        message += `${err.errors[field].message}`
+      }
+      // console.log('Validation error message', message)
+      res.render("movies/new", { message })
+    } else {
       res.render("error404")
     }
-    res.redirect("movies")
-  } catch (err) {
-    console.log(err)
-    res.render("error404")
-  }
+  })
 })
 
 //get new page
@@ -39,62 +52,52 @@ router.get("/new", (req, res) => {
 })
 
 //get edit page
-router.get("/:id/edit", async (req, res) => {
-  try {
-    const { id } = req.params
-    const movie = await Movie.findById(id)
-    if (!movie) {
-      res.render("error404")
-    }
-    res.render("movies/edit", { movie })
-  } catch (err) {
-    console.log(err)
-    res.render("error404")
-  }
+router.get("/:id/edit", (req, res) => {
+  Movie.findById(req.params.id)
+  .then(movie => {
+      res.render('movies/edit', { movie })
+  })
+  .catch(err => {
+      res.render('error404')
+  })
 })
 
 //get movie by index
-router.get("/:id", async (req, res) => {
-  try {
-    const movie = await Movie.findById(req.params.id)
-    if (!movie) {
+router.get("/:id", (req, res) => {
+  Movie.findById(req.params.id)
+    // .populate("comments")
+    .then((movie) => {
+      // console.log(movie.comments)
+      res.render("movies/show", { movie })
+    })
+    .catch((err) => {
+      // console.log("err", err)
       res.render("error404")
-    }
-    res.render("movies/show", { movie })
-  } catch (err) {
-    console.log(err)
-    res.render("error404")
-  }
+    })
 })
 
 //edit movie
-router.put("/:id", async (req, res) => {
-  const { id } = req.params
-  try {
-    const movie = await Movie.findByIdAndUpdate(id, req.body)
-    if (!movie) {
-      res.render("error404")
-    }
-    res.redirect(`/movies/${req.params.id}`)
-  } catch (err) {
-    console.log(err)
-    res.render("error404")
-  }
+router.put("/:id", (req, res) => {
+  Movie.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+      res.redirect(`/movies/${req.params.id}`)
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
 })
 
 //delete movie by index
-router.delete("/:id", async (req, res) => {
-  const { id } = req.params
-  try {
-    const movie = await Movie.findByIdAndDelete(id)
-    if (!movie) {
-      res.render("error404")
-    }
-    res.redirect("/movies")
-  } catch (err) {
-    console.log(err)
-    res.render("error404")
-  }
+router.delete("/:id", (req, res) => {
+  Movie.findByIdAndDelete(req.params.id)
+      .then(() => {
+          res.redirect('/movies')
+      })
+      .catch(err => {
+          console.log('err', err)
+          res.render('error404')
+      })
 })
 
 module.exports = router
