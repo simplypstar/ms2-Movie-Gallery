@@ -5,11 +5,16 @@ const methodOverride = require("method-override")
 const app = express()
 const mongoose = require("mongoose")
 
+// // DB connection
+// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => console.log('DB connected'))
+//     .catch(err => console.error(err));
+
 async function dbconnection() {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
-    //   useUnifiedTopology: true,
+      useUnifiedTopology: true,
     })
     console.log("DB connected")
   } catch (err) {
@@ -39,11 +44,6 @@ app.get("/", (req, res) => {
 app.get("*", (req, res) => {
   res.render("Error404")
 })
-
-// // DB connection
-// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => console.log('DB connected'))
-//     .catch(err => console.error(err));
 
 const PORT = process.env.PORT
 
