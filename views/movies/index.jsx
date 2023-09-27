@@ -25,7 +25,7 @@ function index(data) {
           <h1>Movie Gallery</h1>
           <div className="row show-row">{moviesFormatted}</div>
           <a href="/movies/new">
-          <button className="btn btn-primary">Add a new movie</button>
+          <button className="btn btn-primary">Add a New Movie</button>
         </a>
         </main>
       </body>
