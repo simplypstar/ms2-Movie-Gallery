@@ -1,4 +1,4 @@
-/* Globals */
+/* globals */
 body {
   margin-top: 6em;
   display: flex;
@@ -41,6 +41,7 @@ p {
   letter-spacing: 0.03em;
   font-size: .7em !important;
   line-height: 1em;
+  text-shadow: 0 0 .3rem black;
 }
 
 img {
@@ -49,7 +50,7 @@ img {
   vertical-align: top !important;
 }
 
-/* Home view */
+/* home view */
 body.home {
   display: flex;
   flex-direction: column;
@@ -62,7 +63,7 @@ body.home {
   background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center bottom;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -79,7 +80,7 @@ body.home h2 {
   -webkit-text-stroke: 1px white;
 }
 
-/* Gallery/index view */
+/* gallery view */
 body.gallery {
   background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
   background-size: cover;
@@ -143,14 +144,13 @@ a:hover img {
   margin-right: 5em;
 }
 
-/* Show view */
+/* show view */
 body.show {
   background-image: url("https://media.npr.org/assets/img/2023/03/08/gettyimages-1145944808_custom-c4059a3b99d086477c3e91fc1058b7122431555e-s1600-c85.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  /* min-height: 100vh; */
 }
 
 body.show h1 {
@@ -367,7 +367,7 @@ body.show p {
   }
 }
 
-/* New and Edit views */
+/* new and edit views */
 body.new,
 body.edit {
   background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
@@ -385,7 +385,7 @@ body.edit label {
   text-shadow: 0 0 .3rem black;
 }
 
-/* forms on both New and Edit */
+/* forms on both new and edit */
 form {
   max-width: 600px !important;
   margin: 0 auto;
@@ -405,7 +405,7 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* Error404 view */
+/* error404 view */
 body.error404 {
   background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
   background-size: cover;
@@ -414,7 +414,7 @@ body.error404 {
   background-attachment: fixed;
 }
 
-/* Navbar */
+/* navbar */
 .navbar {
   position: fixed;
   font-family: 'Lato', sans-serif;
@@ -448,7 +448,7 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Buttons on Home, New, and Edit */
+/* buttons on home, new, and edit */
 .btn-primary {
   background-color: green !important;
   color: rgb(244, 232, 207) !important;
@@ -477,10 +477,10 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Edit (btn-warning) and Delete (btn-danger) buttons */
+/* edit (btn-warning) and delete (btn-danger) buttons */
 .edits {
   margin-top: .3em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .btn-warning,
@@ -522,12 +522,13 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Links */
+/* links */
 a:link {
   color: rgb(244, 232, 207);
   font-size: 1em;
   transition: color 0.3s ease;
   text-decoration: none;
+  text-shadow: 0 0 .9em black !important;
 }
 
 a:visited {
@@ -549,23 +550,9 @@ a:active {
 }
 
 /* footer */
-.container {
+.sticky-footer {
   display: flex;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  padding-top: 22px;
-  width: 100%;
-  line-height: 1em !important;
-  font-size: .9em !important;
-}
-
-body.home .container,
-body.new .container,
-body.edit .container {
-  display: flex;
-  position: fixed !important;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -573,53 +560,56 @@ body.edit .container {
   align-items: center;
   padding-top: 22px;
   width: 100%;
+  height: 5em;
   line-height: 1em !important;
-  font-size: .9em !important;
-}
-
-body.show .container {
-  display: flex;
-  position: static !important;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 7em;
-  width: 100%;
-  line-height: 1em !important;
-  font-size: .9em !important;
-}
-
-.icons,
-body.show .icons {
+  background: linear-gradient(to top, rgb(27, 23, 23), rgb(27, 23, 23) 90%, rgba(27, 23, 23, 0));
   color: rgb(244, 232, 207) !important;
+  font-family: 'Lato', sans-serif;
+}
+
+.sticky-footer a {
+  color: rgb(244, 232, 207) !important;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 0;
+}
+
+.sticky-footer a:hover {
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0px 0px 5px rgb(244, 232, 207) !important;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.icons {
+  color: rgb(244, 232, 207) !important;
+}
+
+.copyright {
+  color: rgb(244, 232, 207) !important;
+  font-family: 'Lato', sans-serif;
+  padding-top: 11px;
+}
+
+body.home .copyright,
+body.show .copyright,
+body.new .copyright,
+body.edit .copyright {
+  font-size: .8rem !important;
 }
 
 /* Media query for screens with a maximum width of 768 pixels */
 @media (max-width: 768px) {
   /* Adjust font size of footer text for smaller screens */
-  body.show .container {
-    margin-top: 1em;
-  }
-
-  .copyright,
-  body.show .copyright {
-    font-size: .7em !important;
-  }
-
   .my-info {
-    font-size: .7em !important;
+    font-size: .7rem;
   }
-}
 
-.copyright,
-body.show .copyright {
-  color: rgb(244, 232, 207) !important;
-  font-size: .7em !important;
-  padding-top: 11px;
-}
-
-.my-info {
-  color: rgb(244, 232, 207) !important;
+  body.home .copyright,
+  body.show .copyright,
+  body.new .copyright,
+  body.edit .copyright {
+    font-size: .56rem !important;
+  }
 }

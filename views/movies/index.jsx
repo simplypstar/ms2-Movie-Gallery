@@ -32,7 +32,7 @@ function index(data) {
       <style jsx="true">{`
         .btn-primary {
           margin-top: 1em;
-          margin-bottom: 2em;
+          margin-bottom: 3em;
         }
       `}</style>
     </Default>
