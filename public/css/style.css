@@ -6,7 +6,7 @@ body {
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
-  color: pink;
+  color: rgb(244, 232, 207);
   text-shadow: 0 0 .2rem white;
   background-color: black;
 }
@@ -56,8 +56,8 @@ body.home {
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
-  color: pink;
-  text-shadow: 0 0 .1rem white;
+  color: rgb(244, 232, 207);
+  text-shadow: 0 0 .1rem rgb(244, 232, 207);
   background-color: black;
   background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
   background-size: cover;
@@ -150,6 +150,7 @@ body.show {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  /* min-height: 100vh; */
 }
 
 body.show h1 {
@@ -367,17 +368,9 @@ body.show p {
 }
 
 /* New and Edit views */
+body.new,
 body.edit {
   background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-
-body.new {
-  background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -426,6 +419,7 @@ body.error404 {
   position: fixed;
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
+  font-style: italic;
   top: 0;
   left: 0;
   width: 100%;
@@ -443,7 +437,6 @@ body.error404 {
 
 .nav-link {
   color: rgb(244, 232, 207) !important;
-  /* -webkit-text-stroke: 1px black; */
   font-size: 1.2em !important;
   transition: 0.3s ease-in-out !important;
 }
@@ -553,4 +546,80 @@ a:hover {
 a:active {
   color: rgb(94, 94, 157);
   text-decoration: none;
+}
+
+/* footer */
+.container {
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  width: 100%;
+  line-height: 1em !important;
+  font-size: .9em !important;
+}
+
+body.home .container,
+body.new .container,
+body.edit .container {
+  display: flex;
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  width: 100%;
+  line-height: 1em !important;
+  font-size: .9em !important;
+}
+
+body.show .container {
+  display: flex;
+  position: static !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 7em;
+  width: 100%;
+  line-height: 1em !important;
+  font-size: .9em !important;
+}
+
+.icons,
+body.show .icons {
+  color: rgb(244, 232, 207) !important;
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+  /* Adjust font size of footer text for smaller screens */
+  body.show .container {
+    margin-top: 1em;
+  }
+
+  .copyright,
+  body.show .copyright {
+    font-size: .7em !important;
+  }
+
+  .my-info {
+    font-size: .7em !important;
+  }
+}
+
+.copyright,
+body.show .copyright {
+  color: rgb(244, 232, 207) !important;
+  font-size: .7em !important;
+  padding-top: 11px;
+}
+
+.my-info {
+  color: rgb(244, 232, 207) !important;
 }
