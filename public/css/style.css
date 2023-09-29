@@ -71,6 +71,7 @@ body.home {
 body.home h1 {
   color: #ed8d00;
   -webkit-text-stroke: 1px white;
+  margin-top: .5em;
 }
 
 body.home h2 {
@@ -203,7 +204,7 @@ body.show p {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1401px) {
   h1 {
     font-size: 5em !important;
   }
@@ -237,7 +238,7 @@ body.show p {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   h1 {
     font-size: 4.5em !important;
   }
@@ -269,11 +270,11 @@ body.show p {
 
 @media (max-width: 992px) {
   h1 {
-    font-size: 4em !important;
+    font-size: 4.5em !important;
   }
 
   h2 {
-    font-size: 2.75em !important;
+    font-size: 3em !important;
   }
 
   body.show h1,
@@ -309,17 +310,17 @@ body.show p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 3em !important;
+    font-size: 2.5em !important;
   }
 
   h2 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
   }
 
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
-    font-size: 2.33em !important;
+    font-size: 2em !important;
   }
 
   body.show p {
@@ -415,6 +416,19 @@ body.error404 {
   overflow: hidden;
 }
 
+body.error404 h1 {
+  color: rgb(244, 232, 207);
+  -webkit-text-stroke: 1px white;
+  font-size: 2.5em !important;
+  margin-top: -.9em;
+}
+
+@media (max-width: 768px) {
+  body.error404 h1 {
+    font-size: 1.5em !important;
+  }
+}
+
 /* navbar */
 .navbar {
   position: fixed;
@@ -462,6 +476,13 @@ body.error404 {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .btn-primary {
+    font-size: 2em !important;
+    border-radius: .4em;
+  }
 }
 
 .btn-primary:hover {
@@ -595,7 +616,8 @@ a:active {
 body.home .copyright,
 body.show .copyright,
 body.new .copyright,
-body.edit .copyright {
+body.edit .copyright,
+body.error404 .copyright {
   font-size: .8rem !important;
 }
 
