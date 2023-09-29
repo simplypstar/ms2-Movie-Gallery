@@ -42,6 +42,7 @@ function Default(props) {
               ✦ WebDesigns by Mike ✦
               <a
                 href="https://www.linkedin.com/in/michael-m-weisphal/"
+                target="_blank"
                 style={{ marginLeft: "20px" }}
               >
                 <svg
@@ -58,6 +59,7 @@ function Default(props) {
               </a>
               <a
                 href="https://github.com/michaelangelesz"
+                target="_blank"
                 style={{ marginLeft: "20px" }}
               >
                 <svg
@@ -73,7 +75,8 @@ function Default(props) {
                 GitHub
               </a>
               <a
-                href="https://michaelangelesz.github.io/FSI-Build-a-Portfolio/"
+                href="https://mike-weisphal-portfolio.onrender.com/"
+                target="_blank"
                 style={{ marginLeft: "20px" }}
               >
                 <svg
@@ -90,7 +93,7 @@ function Default(props) {
                 Portfolio
               </a>
               <p className="copyright">
-                ✦ Design Sample © Michael M. Weisphal 2020-
+                ✦ Sample Design © Michael M. Weisphal 2020-
                 {new Date().getFullYear()} ✦
               </p>
             </span>
