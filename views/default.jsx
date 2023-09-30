@@ -93,7 +93,7 @@ function Default(props) {
                 Portfolio
               </a>
               <p className="copyright">
-                ✦ Sample Design © Michael M. Weisphal 2020-
+                ✦ Sample Design & Layout ✦ Mike M. Weisphal 2020-
                 {new Date().getFullYear()} ✦
               </p>
             </span>
