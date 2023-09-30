@@ -76,7 +76,7 @@ Possible bonus ideas:
 ## App background image source links:
 
 [Welcome Page Majestic Cinema](https://www.flickr.com/photos/sharkypics/50243040877/)<br>
-[Add a Movie view background](https://www.freepik.com/free-photo/movie-background-collage_33752481.htm#query=film%20background&position=8&from_view=keyword&track=ais)<br>
+[Add a Movie view clapperboard & film](https://www.freepik.com/free-photo/movie-background-collage_33752481.htm#query=film%20background&position=8&from_view=keyword&track=ais)<br>
 [Gallery view galaxy background](https://www.pexels.com/photo/milky-way-photography-2312040/)<br>
 [Show view ‘red curtain’](https://www.npr.org/2023/03/09/1160731547/spelling-bee-high-school-theater)<br>
 [Edit view director's chair](https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)<br>
@@ -85,5 +85,5 @@ Possible bonus ideas:
 All movie posters sourced from [movieposterdb.com](https://www.movieposterdb.com/) with the exception of:<br>
 [Gadar 2](https://www.imdb.com/title/tt15441054/)<br>
 [Kung Fu Panda](https://www.amazon.com/Kung-Panda-Widescreen-Jack-Black/dp/B001ECQ75A)<br>
-[The Super Mario Bros](https://www.thesupermariobros.movie/character-gallery/)<br>  
+[The Super Mario Bros](https://www.thesupermariobros.movie/character-gallery/)<br>
 [The Goonies](https://xl.movieposterdb.com/05_09/1985/0089218/xl_51014_0089218_1e6b1771.jpg?v=2023-09-16%2011:48:49)
