@@ -369,9 +369,17 @@ body.show p {
 }
 
 /* new and edit views */
-body.new,
 body.edit {
   background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+body.new {
+  background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?w=1380&t=st=1696097277~exp=1696097877~hmac=c53af1a166cae1127abc926ab789ae4ec74cadbebae5cc4d4179091855be1bc1");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
