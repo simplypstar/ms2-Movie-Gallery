@@ -1,4 +1,4 @@
-/* Globals */
+/* globals */
 body {
   margin-top: 6em;
   display: flex;
@@ -6,7 +6,7 @@ body {
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
-  color: pink;
+  color: rgb(244, 232, 207);
   text-shadow: 0 0 .2rem white;
   background-color: black;
 }
@@ -41,6 +41,7 @@ p {
   letter-spacing: 0.03em;
   font-size: .7em !important;
   line-height: 1em;
+  text-shadow: 0 0 .3rem black;
 }
 
 img {
@@ -49,20 +50,20 @@ img {
   vertical-align: top !important;
 }
 
-/* Home view */
+/* home view */
 body.home {
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
-  color: pink;
-  text-shadow: 0 0 .1rem white;
+  color: rgb(244, 232, 207);
+  text-shadow: 0 0 .1rem rgb(244, 232, 207);
   background-color: black;
   background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center bottom;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -70,6 +71,7 @@ body.home {
 body.home h1 {
   color: #ed8d00;
   -webkit-text-stroke: 1px white;
+  margin-top: .5em;
 }
 
 body.home h2 {
@@ -79,7 +81,7 @@ body.home h2 {
   -webkit-text-stroke: 1px white;
 }
 
-/* Gallery/index view */
+/* gallery view */
 body.gallery {
   background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
   background-size: cover;
@@ -143,7 +145,7 @@ a:hover img {
   margin-right: 5em;
 }
 
-/* Show view */
+/* show view */
 body.show {
   background-image: url("https://media.npr.org/assets/img/2023/03/08/gettyimages-1145944808_custom-c4059a3b99d086477c3e91fc1058b7122431555e-s1600-c85.webp");
   background-size: cover;
@@ -202,7 +204,7 @@ body.show p {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1401px) {
   h1 {
     font-size: 5em !important;
   }
@@ -236,7 +238,7 @@ body.show p {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   h1 {
     font-size: 4.5em !important;
   }
@@ -268,11 +270,11 @@ body.show p {
 
 @media (max-width: 992px) {
   h1 {
-    font-size: 4em !important;
+    font-size: 4.5em !important;
   }
 
   h2 {
-    font-size: 2.75em !important;
+    font-size: 3em !important;
   }
 
   body.show h1,
@@ -308,17 +310,17 @@ body.show p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 3em !important;
+    font-size: 2.5em !important;
   }
 
   h2 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
   }
 
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
-    font-size: 2.33em !important;
+    font-size: 2em !important;
   }
 
   body.show p {
@@ -366,21 +368,21 @@ body.show p {
   }
 }
 
-/* New and Edit views */
+/* new and edit views */
 body.edit {
   background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom center;
   background-attachment: fixed;
   overflow: hidden;
 }
 
 body.new {
-  background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
+  background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?w=1380&t=st=1696097277~exp=1696097877~hmac=c53af1a166cae1127abc926ab789ae4ec74cadbebae5cc4d4179091855be1bc1");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom center;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -392,7 +394,7 @@ body.edit label {
   text-shadow: 0 0 .3rem black;
 }
 
-/* forms on both New and Edit */
+/* forms on both new and edit */
 form {
   max-width: 600px !important;
   margin: 0 auto;
@@ -412,20 +414,35 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* Error404 view */
+/* error404 view */
 body.error404 {
   background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
-/* Navbar */
+body.error404 h1 {
+  color: rgb(244, 232, 207);
+  -webkit-text-stroke: 1px white;
+  font-size: 2.5em !important;
+  margin-top: -.9em;
+}
+
+@media (max-width: 768px) {
+  body.error404 h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+/* navbar */
 .navbar {
   position: fixed;
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
+  font-style: italic;
   top: 0;
   left: 0;
   width: 100%;
@@ -443,7 +460,6 @@ body.error404 {
 
 .nav-link {
   color: rgb(244, 232, 207) !important;
-  /* -webkit-text-stroke: 1px black; */
   font-size: 1.2em !important;
   transition: 0.3s ease-in-out !important;
 }
@@ -455,10 +471,10 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Buttons on Home, New, and Edit */
+/* buttons on home, new, and edit */
 .btn-primary {
   background-color: green !important;
-  color: rgb(201, 236, 217) !important;
+  color: rgb(244, 232, 207) !important;
   padding: 0rem 2.2rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -470,10 +486,18 @@ body.error404 {
   padding-bottom: 4px;
 }
 
+@media (max-width: 768px) {
+  .btn-primary {
+    font-size: 2em !important;
+    border-radius: .4em;
+  }
+}
+
 .btn-primary:hover {
   transform: scale(1.05);
   background-color: green !important;
   color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .25em rgb(244, 232, 207) !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -483,10 +507,10 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Edit (btn-warning) and Delete (btn-danger) buttons */
+/* edit (btn-warning) and delete (btn-danger) buttons */
 .edits {
   margin-top: .3em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .btn-warning,
@@ -528,7 +552,7 @@ body.error404 {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Links */
+/* links */
 a:link {
   color: rgb(244, 232, 207);
   font-size: 1em;
@@ -552,4 +576,70 @@ a:hover {
 a:active {
   color: rgb(94, 94, 157);
   text-decoration: none;
+}
+
+/* footer */
+.sticky-footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  width: 100%;
+  height: 5em;
+  line-height: 1em !important;
+  background: linear-gradient(to top, rgb(27, 23, 23), rgb(27, 23, 23) 90%, rgba(27, 23, 23, 0));
+  color: rgb(244, 232, 207) !important;
+  font-family: 'Lato', sans-serif;
+}
+
+.sticky-footer a {
+  color: rgb(244, 232, 207) !important;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 0;
+}
+
+.sticky-footer a:hover {
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .9em rgb(244, 232, 207) !important;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.icons {
+  color: rgb(244, 232, 207) !important;
+}
+
+.copyright {
+  color: rgb(244, 232, 207) !important;
+  font-family: 'Lato', sans-serif;
+  padding-top: 11px;
+}
+
+body.home .copyright,
+body.show .copyright,
+body.new .copyright,
+body.edit .copyright,
+body.error404 .copyright {
+  font-size: .8rem !important;
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+  /* Adjust font size of footer text for smaller screens */
+  .my-info {
+    font-size: .7rem;
+  }
+
+  body.home .copyright,
+  body.show .copyright,
+  body.new .copyright,
+  body.edit .copyright {
+    font-size: .56rem !important;
+  }
 }

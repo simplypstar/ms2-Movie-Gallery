@@ -24,8 +24,17 @@ function index(data) {
         <main>
           <h1>Movie Gallery</h1>
           <div className="row show-row">{moviesFormatted}</div>
+          <a href="/movies/new">
+          <button className="btn btn-primary">Add a New Movie</button>
+        </a>
         </main>
       </body>
+      <style jsx="true">{`
+        .btn-primary {
+          margin-top: 1em;
+          margin-bottom: 3em;
+        }
+      `}</style>
     </Default>
   )
 }
